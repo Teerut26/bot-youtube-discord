@@ -13,12 +13,6 @@ async function getVideoLink(keyWord) {
   if (keyWord.match(/ht.*?\/\//g)) {
     return keyWord;
   } else {
-    // const response = await axios.get(
-    //   "https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=" +
-    //     encodeURIComponent(keyWord) +
-    //     "&type=video&key=AIzaSyBLptVtxSxpl3q6gTULHyKRPxy_TSInQFk"
-    // );
-
     const response = await axios.get(
       `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(
         keyWord
